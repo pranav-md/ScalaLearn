@@ -46,7 +46,8 @@ object HelloWorld extends App {
       println("x= "+x)
    }
 
-   def stringOperations(x:String):Unit=     //// => makes all the difference
+   def stringOperations(x:String):Unit=     //// => makes all th
+   // difference
    {
       println("x= "+x)
       println("x= "+x)
