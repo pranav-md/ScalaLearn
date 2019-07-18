@@ -25,5 +25,8 @@ object MapFlatMapFilterFor extends  App
 
 
     val combinations=numbers.flatMap(n=> chars.flatMap(c=> colors.map( col=> " "+n+" "+c+" "+col)))
+
+
+
     println("Combinations are: "+combinations)
 }
