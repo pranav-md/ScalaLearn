@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.arangodb:velocypack-module-scala:1.0.2:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.arangodb/velocypack-module-scala/jars/velocypack-module-scala-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.arangodb/velocypack-module-scala/srcs/velocypack-module-scala-1.0.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.arangodb:arangodb-java-driver:5.0.7:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.arangodb/arangodb-java-driver/jars/arangodb-java-driver-5.0.7.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.arangodb/arangodb-java-driver/srcs/arangodb-java-driver-5.0.7-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

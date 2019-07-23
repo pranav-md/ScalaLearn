@@ -8,7 +8,6 @@ object MapExercises extends App {
   var loop=1
   while (loop==1) {
     println("SOCIAL NETWORK")
-
     println("1. Print all users")
     println("2. Add a user")
     println("3. Delete a user")
@@ -16,9 +15,7 @@ object MapExercises extends App {
     println("5. Add friend of a User")
     println("6. Delete a friend of a User")
     println("7. Stop")
-
     val choice = scala.io.StdIn.readInt()
-
     choice match {
       case 1 => printAllUsers()
       case 2 => addUser()
@@ -28,12 +25,13 @@ object MapExercises extends App {
       case 6 => deleteUserFriend()
       case 7 => loop=0
     }
-
   }
+
   def printAllUsers() {
     println("THE USERS ARE:")
     allPPL.keys.map(id=> println(id+".  "+allPPL(id)))
    }
+
   def addUser(){
     println("ADD NEW USER")
     println("Enter user name:  ")
@@ -42,6 +40,7 @@ object MapExercises extends App {
     allPPL=allPPL+newUser
     println("USER ADDED SUCCESSFULLY")
   }
+
   def deleteUser(){
     println("DELETE A USER")
     println("Enter user ID:  ")
@@ -50,6 +49,7 @@ object MapExercises extends App {
     allPPL-=id
     println("DELETED "+name+" SUCCESSFULLY!")
   }
+
   def showUserFriends()
   {
       println("SHOW FRIENDS OF USER")
@@ -96,7 +96,4 @@ object MapExercises extends App {
       println("USER FRIEND DELETED SUCCESSFULLY")
     }
   }
-
-
-
 }

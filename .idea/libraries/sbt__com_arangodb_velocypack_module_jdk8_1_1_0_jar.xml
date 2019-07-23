@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="sbt: com.arangodb:velocypack-module-jdk8:1.1.0:jar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.arangodb/velocypack-module-jdk8/jars/velocypack-module-jdk8-1.1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.ivy2/cache/com.arangodb/velocypack-module-jdk8/srcs/velocypack-module-jdk8-1.1.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
