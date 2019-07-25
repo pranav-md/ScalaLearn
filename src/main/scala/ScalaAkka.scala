@@ -6,6 +6,10 @@
  import akka.http.scaladsl.model._
  import akka.http.scaladsl.server.Directives._
  import akka.stream.ActorMaterializer
+ import com.arangodb.entity.BaseDocument
+ import com.arangodb.model.AqlQueryOptions
+ import com.arangodb.util.MapBuilder
+
  import scala.io.StdIn
 
  object ScalaAkka extends App{
@@ -65,7 +69,6 @@
          }
          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>"+result+"</h1>"))
        }
-
      }
     var route3 =
    path("newdocument") {
@@ -82,7 +85,39 @@
          }
        complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>"+result+"</h1>"))
      }
+     get
+     {
+       var result=""
+       try {
+         val q_db=arangoDB.db("NewDB").query("FOR coll IN NewCollection RETURN coll",null,null,classOf[String])
+         result="Success "
+         for(elem<- q_db) result=result+"---"+elem
+
+       }
+       catch
+         {
+           case x:Exception=> result="Failed :"+x
+         }
+       complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>"+result+"</h1>"))
+     }
    }
+
+   var route5 =
+     path("newdocument") {
+       post
+       {
+         var result=""
+         try {
+            val q_db=arangoDB.db("NewDB").query("FOR coll IN NewCollection RETURN coll",null,null,classOf[String])
+           result="Success "+q_db
+         }
+         catch
+           {
+             case x:Exception=> result="Failed :"+x
+           }
+         complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>"+result+"</h1>"))
+       }
+     }
 
    var routes=route1~route2~route3
 
@@ -92,8 +127,4 @@
    bindingFuture
      .flatMap(_.unbind()) // trigger unbinding from the port
      .onComplete(_ => system.terminate()) // and shutdown when done
-
-
-
-
 }

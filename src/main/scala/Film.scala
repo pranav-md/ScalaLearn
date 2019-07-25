@@ -1,6 +1,6 @@
 
 
-class Film(flname: String,xyearofrl: Int, dir: Director)  {
+class Film(flname: String,xyearofrl: Int, dir: Director) {
     var name=flname
     var yearOfRelease=xyearofrl
     var typeDirector=dir
