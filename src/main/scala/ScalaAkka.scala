@@ -1,3 +1,5 @@
+ import java.util.Calendar
+
  import com.arangodb.ArangoDB
  import com.arangodb.spark.ArangoSpark
  import org.apache.spark.{SparkConf, SparkContext}
@@ -9,6 +11,8 @@
  import com.arangodb.entity.BaseDocument
  import com.arangodb.model.AqlQueryOptions
  import com.arangodb.util.MapBuilder
+ import example.html.twirltry
+ import main.scala.Cat
 
  import scala.io.StdIn
 
@@ -70,6 +74,16 @@
          complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, "<h1>"+result+"</h1>"))
        }
      }
+
+   var route6 =
+     path("twirltry") {
+       get
+       {
+         var cats= List[Cat](new Cat("Cat1","Brown","Chicken"),new Cat("Cat2","White","Egg"),new Cat("Cat3","Black","KFC"))
+         complete(HttpEntity(ContentTypes.`text/html(UTF-8)`, twirltry.render(cats).toString()))
+       }
+     }
+
     var route3 =
    path("newdocument") {
      post
@@ -119,7 +133,7 @@
        }
      }
 
-   var routes=route1~route2~route3
+   var routes=route1~route2~route3~route6
 
    val bindingFuture = Http().bindAndHandle(routes, "localhost", 8081)
    println(s"Server online at http://localhost:8081/\nPress RETURN to stop...")

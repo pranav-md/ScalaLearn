@@ -1,0 +1,8 @@
+@import main.scala.Cat
+@(cats: List[Cat])
+
+<ul>
+  @for(p <- cats) {
+    <li>Name:@p.name  Color:@p.color   Food:@p.food</li>
+  }
+</ul>

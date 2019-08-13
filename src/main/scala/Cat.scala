@@ -1,4 +1,4 @@
-
+package main.scala
 
 class Cat(xname: String, xcolor: String, xfood: String)
 {
