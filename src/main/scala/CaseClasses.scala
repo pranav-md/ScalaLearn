@@ -13,6 +13,6 @@ object CaseClasses extends App{
     val p3=p1.copy(age=23)  /// cloning the objects
     println(p3)
 
-
+    
 
 }
