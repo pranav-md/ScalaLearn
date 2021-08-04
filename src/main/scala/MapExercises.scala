@@ -1,6 +1,6 @@
 object MapExercises extends App {
 
-  var m1=Map("Kuttappan"->3,"Ruchi"->2,"Becky"->4,"MEGHA"->23)
+  var m1=Map("Kuttappan"->3,"Ruchi"->2,"Becky"->4,"lal"->23)
 
   var allPPL=Map(1->"Pranav",2->"Jimmy",3->"Kuttappan",4->"Sashi").withDefaultValue(-1)
 
