@@ -1,8 +1,8 @@
 object MapExercises extends App {
 
-  var m1=Map("Megha"->3,"Ruchi"->2,"Becky"->4,"MEGHA"->23)
+  var m1=Map("Kuttappan"->3,"Ruchi"->2,"Becky"->4,"MEGHA"->23)
 
-  var allPPL=Map(1->"Pranav",2->"Steny",3->"Kuttappan",4->"Sashi").withDefaultValue(-1)
+  var allPPL=Map(1->"Pranav",2->"Jimmy",3->"Kuttappan",4->"Sashi").withDefaultValue(-1)
 
   var allFriends=Map(1->List(2,3,4),2->List(1,4))
   var loop=1
